@@ -14,7 +14,7 @@ export class SimulationWrapperComponent implements OnInit {
   @Input() simDescription: string = '';
   @Input() simNumber: number = 0; // 6: Factores Cultivo, 7: Escalas Productivas, 8: Resiliencia Agrícola
   @Input() lineamientos: string = '';
-  @Input() bloque: 'intro' | 'agro' = 'agro';
+  @Input() bloque: 'agua' | 'agro' | 'intro' = 'agro';
   @Input() hasApropiacion: boolean = false;
 
   activeTab: 'apropiacion' | 'actividad' | 'simulador' | 'evaluacion' = 'simulador';
