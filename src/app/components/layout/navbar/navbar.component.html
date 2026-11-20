@@ -1,0 +1,41 @@
+<nav class="eva-navbar">
+  <div class="nav-brand">
+    <span class="brand-icon">🌱</span>
+    <span class="brand-name"><span class="brand-highlight">PS </span> <span class="brand-sub"><span
+          class="text-neon-blue">Agrosistemas</span> <span
+          class="text-neon-green">DSSAT</span></span>
+    </span>
+  </div>
+
+  <div class="nav-tabs">
+    <a class="nav-tab" routerLink="/landing" routerLinkActive="active">
+      <span class="tab-icon">🏠</span>
+      <span class="tab-label">Inicio</span>
+    </a>
+    <a class="nav-tab" routerLink="/dashboard" routerLinkActive="active" *ngIf="isStudentOrAdmin()">
+      <span class="tab-icon">📊</span>
+      <span class="tab-label">Mis Actividades</span>
+    </a>
+    <a class="nav-tab" routerLink="/laboratorio" routerLinkActive="active">
+      <span class="tab-icon">🔬</span>
+      <span class="tab-label">Laboratorio</span>
+    </a>
+    <a class="nav-tab" routerLink="/recursos" routerLinkActive="active">
+      <span class="tab-icon">📁</span>
+      <span class="tab-label">Recursos</span>
+    </a>
+    <a class="nav-tab" routerLink="/usuarios" routerLinkActive="active" *ngIf="isAdminOrProfesor()">
+      <span class="tab-icon">👥</span>
+      <span class="tab-label">Usuarios</span>
+    </a>
+    <a class="nav-tab" routerLink="/resultados" routerLinkActive="active">
+      <span class="tab-icon">🏆</span>
+      <span class="tab-label">{{ getResultadosLabel() }}</span>
+    </a>
+  </div>
+
+  <button class="btn-logout" (click)="logout()">
+    <span class="logout-icon">🚪</span>
+    <span class="logout-text">Salir</span>
+  </button>
+</nav>

@@ -1,0 +1,206 @@
+<div class="intro-lab-container">
+  <div class="intro-header">
+    <h1 class="text-neon-blue">Laboratorio de Introducción</h1>
+    <p class="subtitle">Presentación de la secuencia didáctica y pensamiento sistémico</p>
+  </div>
+
+  <div class="tab-navigation">
+    <button [class.active]="activeTab === 'ejemplos'" (click)="setTab('ejemplos')">
+      <span class="tab-icon">🪐</span> Ejemplos de Sistemas
+    </button>
+    <button [class.active]="activeTab === 'lluvia'" (click)="setTab('lluvia')">
+      <span class="tab-icon">💡</span> Lluvia de Ideas
+    </button>
+    <button [class.active]="activeTab === 'apropiacion'" (click)="setTab('apropiacion')">
+      <span class="tab-icon">🛠️</span> Apropiación
+    </button>
+    <button [class.active]="activeTab === 'sintesis'" (click)="setTab('sintesis')">
+      <span class="tab-icon">📝</span> Síntesis Final
+    </button>
+  </div>
+
+  <div class="tab-content glass-panel">
+    <!-- 1: EJEMPLOS DE SISTEMAS -->
+    <div *ngIf="activeTab === 'ejemplos'" class="video-section animate-fade">
+      <h3>🪐 Ejemplos de Sistemas</h3>
+      <p class="section-desc">
+        Antes de ver el video introductorio, analicemos estos tres sistemas cotidianos para entender
+        las relaciones sistémicas:
+      </p>
+
+      <div class="sim-stack-intro">
+        <!-- 1. Sistema Solar Completo -->
+        <div class="sim-item full-width">
+          <h4>El Sistema Solar</h4>
+          <div class="sim-visual solar-visual">
+            <div class="stars"></div>
+            <div class="shooting-star"></div>
+            <div class="solar-system-full">
+              <div class="sun-glow"></div>
+              <div class="orbit orbit-mercury"><div class="planet planet-mercury"></div></div>
+              <div class="orbit orbit-venus"><div class="planet planet-venus"></div></div>
+              <div class="orbit orbit-earth">
+                <div class="planet planet-earth">
+                  <div class="orbit-moon"><div class="moon"></div></div>
+                </div>
+              </div>
+              <div class="orbit orbit-mars"><div class="planet planet-mars"></div></div>
+              <div class="orbit orbit-jupiter"><div class="planet planet-jupiter"></div></div>
+              <div class="orbit orbit-saturn">
+                <div class="planet planet-saturn">
+                  <div class="saturn-rings"></div>
+                </div>
+              </div>
+              <div class="orbit orbit-uranus"><div class="planet planet-uranus"></div></div>
+              <div class="orbit orbit-neptune"><div class="planet planet-neptune"></div></div>
+            </div>
+          </div>
+          <p class="sim-caption">El sistema solar se compone de una estrella central (el Sol) y 8 planetas principales que orbitan a diferentes distancias y velocidades debido a la fuerza gravitacional. En el enfoque sistémico, la alteración de la masa o de la órbita de uno solo de estos cuerpos masivos desequilibraría toda la estructura gravitatoria.</p>
+        </div>
+
+        <!-- 2. Sistema Eléctrico (Casa) -->
+        <div class="sim-item full-width">
+          <h4>Sistema Eléctrico Doméstico</h4>
+          <div class="sim-visual electric-visual">
+            <picture>
+              <source media="(min-width: 769px)" srcset="assets/images/isometric_house.png">
+              <img src="assets/images/isometric_house_mobile.png" class="isometric-bg" alt="Casa Isométrica">
+            </picture>
+            
+            <div class="isometric-overlay house-circuit-overlay">
+              <!-- Circuito Eléctrico SVG -->
+              <svg class="circuit-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <!-- Cable principal (azul cyan brillante) -->
+                <path class="wire-main" d="M 85 88 L 85 70 L 50 70 L 50 48 L 22 48 L 22 30" />
+                <!-- Ramal Piso 1: Sala + Cocina -->
+                <path class="wire-branch" d="M 50 70 L 25 70" />
+                <path class="wire-branch" d="M 50 70 L 72 70" />
+                <!-- Ramal Piso 2: Dormitorio + Baño -->
+                <path class="wire-branch" d="M 22 30 L 40 30" />
+                <path class="wire-branch" d="M 22 48 L 68 48 L 68 30" />
+                <!-- Energía viajando (círculos animados por las rutas) -->
+                <circle class="energy-dot ed-1" r="1.2">
+                  <animateMotion dur="3s" repeatCount="indefinite" path="M 85 88 L 85 70 L 50 70 L 50 48 L 22 48 L 22 30" />
+                </circle>
+                <circle class="energy-dot ed-2" r="1">
+                  <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.5s" path="M 50 70 L 25 70" />
+                </circle>
+                <circle class="energy-dot ed-3" r="1">
+                  <animateMotion dur="2.5s" repeatCount="indefinite" begin="1s" path="M 50 70 L 72 70" />
+                </circle>
+                <circle class="energy-dot ed-4" r="1">
+                  <animateMotion dur="2s" repeatCount="indefinite" begin="1.5s" path="M 22 30 L 40 30" />
+                </circle>
+              </svg>
+
+              <!-- Fuente eléctrica -->
+              <div class="circuit-source">⚡</div>
+            </div>
+          </div>
+          <p class="sim-caption">Un hogar cuenta con un sistema eléctrico compuesto por una fuente de energía, una red de conductores (cables) y nodos de consumo (focos, enchufes). Si un nodo falla, el sistema busca rutas alternas, pero si la fuente o la red principal se interrumpe, el sistema completo deja de funcionar y pierde su propósito.</p>
+        </div>
+
+        <!-- 3. Sistema de Transporte (Ciudad) -->
+        <div class="sim-item full-width">
+          <h4>Sistema de Transporte Urbano</h4>
+          <div class="sim-visual city-visual">
+            <picture>
+              <source media="(min-width: 769px)" srcset="assets/images/isometric_city.png">
+              <img src="assets/images/isometric_city_mobile.png" class="isometric-bg" alt="Ciudad Isométrica">
+            </picture>
+            <div class="city-map isometric-overlay">
+              <!-- Vehículos en 3D isométrico -->
+              <div class="car-iso car-iso-1"></div>
+              <div class="car-iso car-iso-2"></div>
+              <div class="car-iso car-iso-3"></div>
+              <div class="car-iso car-iso-4"></div>
+            </div>
+          </div>
+          <p class="sim-caption">Una ciudad es una red de flujos continuos. Sus vías interconectadas, señales, vehículos y pasajeros forman el sistema de transporte. Desde una óptica sistémica, un embotellamiento en una pequeña intersección (cuello de botella) puede generar retrasos en cascada, paralizando zonas distantes de la urbe.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: LLUVIA DE IDEAS -->
+    <div *ngIf="activeTab === 'lluvia'" class="foro-section animate-fade">
+      
+      <h3 class="mb-3">📽️ Proyección de Introducción</h3>
+      <p class="section-desc">
+        Ahora, observa este video para comprender cómo el pensamiento sistémico
+        se aplica a la agroecología, los cultivos y los sistemas complejos.
+      </p>
+      <div class="video-wrapper">
+        <iframe [src]="videoUrl" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      
+      <div class="inspiring-text glass-panel mt-4 mb-5">
+        <p class="text-neon-blue"><strong>Tú eres parte del sistema.</strong></p>
+        <p>
+          Las nubes que precipitan agua, la semilla que germina en la tierra y la energía que fluye por tu hogar
+          no son hechos aislados. Todo está conectado en un inmenso tejido de relaciones interdependientes.
+          Al comprender las reglas invisibles que rigen estos sistemas, no solo adquieres el poder de 
+          analizar la realidad, sino la capacidad de <strong>tomar decisiones que transformen positivamente 
+          el mundo que te rodea</strong>.
+        </p>
+      </div>
+
+      <hr class="separator" />
+
+      <h3>💡 Lluvia de Ideas</h3>
+      <p class="section-desc">
+        Con base en los ejemplos observados y el video, realiza una lluvia de ideas. Anota al menos 3 interconexiones
+        o elementos que consideres clave para entender el agroecosistema como un sistema completo (clima, suelo, planta, agua, plagas y manejo humano).
+      </p>
+
+      <div class="input-group">
+        <textarea [(ngModel)]="lluviaIdeas" [disabled]="isLluviaIdeasSaved" placeholder="Escribe aquí tu lluvia de ideas..."
+          class="glass-textarea" rows="8"></textarea>
+      </div>
+
+      <div class="action-footer">
+        <button class="btn-save" (click)="saveLluviaIdeas()"
+          [disabled]="isLluviaIdeasSaved || !lluviaIdeas.trim() || loading">
+          {{ isLluviaIdeasSaved ? '✓ Lluvia de Ideas Guardada' : (loading ? 'Guardando...' : 'Guardar Evidencia') }}
+        </button>
+      </div>
+      <p class="status-msg" *ngIf="message">{{ message }}</p>
+    </div>
+
+    <!-- 3: APROPIACIÓN -->
+    <div *ngIf="activeTab === 'apropiacion'" class="animate-fade">
+      <h3>🛠️ Apropiación</h3>
+      <p class="section-desc">
+        En este espacio el docente guiará una reflexión grupal para que apropies los conceptos de pensamiento sistémico.
+        Presta atención a las instrucciones de tu profesor sobre cómo estos conceptos se conectan con las simulaciones que realizarás más adelante.
+      </p>
+      <div class="placeholder-box glass-panel">
+        <span class="placeholder-icon">👨‍🏫</span>
+        <p>Espacio reservado para la actividad presencial o guiada por el docente.</p>
+      </div>
+    </div>
+
+    <!-- 4: SÍNTESIS FINAL -->
+    <div *ngIf="activeTab === 'sintesis'" class="sintesis-section animate-fade">
+      <h3>📝 Síntesis Final</h3>
+      <p class="section-desc">
+        A modo de cierre de esta sesión introductoria, redacta una conclusión personal o síntesis final
+        sobre la importancia de abordar los problemas ambientales desde una visión sistémica.
+      </p>
+
+      <div class="input-group">
+        <textarea [(ngModel)]="conclusion" [disabled]="isConclusionSaved"
+          placeholder="Redacta tu síntesis final aquí..." class="glass-textarea" rows="8"></textarea>
+      </div>
+
+      <div class="action-footer">
+        <button class="btn-save" (click)="saveConclusion()"
+          [disabled]="isConclusionSaved || !conclusion.trim() || loading">
+          {{ isConclusionSaved ? '✓ Conclusión Guardada' : (loading ? 'Guardando...' : 'Guardar Evidencia') }}
+        </button>
+      </div>
+      <p class="status-msg" *ngIf="message">{{ message }}</p>
+    </div>
+  </div>
+</div>

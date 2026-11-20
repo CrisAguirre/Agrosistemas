@@ -1,0 +1,272 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  .login-card {
+    padding: 20px;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.header h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.mt-2 { margin-top: 10px; }
+.mt-4 { margin-top: 20px; }
+
+.error-message {
+  color: #ff4757;
+  font-size: 0.85rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Background animated Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.orb-blue {
+  width: 300px;
+  height: 300px;
+  background: var(--neon-blue);
+  top: -100px;
+  left: -100px;
+  animation: float1 10s infinite alternate;
+}
+
+.orb-purple {
+  width: 400px;
+  height: 400px;
+  background: var(--neon-purple);
+  bottom: -150px;
+  right: -100px;
+  animation: float2 12s infinite alternate;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(100px, 100px); }
+}
+
+.guest-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0 16px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.guest-divider::before,
+.guest-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.guest-divider span {
+  padding: 0 12px;
+}
+
+
+.btn-admin {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 100, 100, 0.2);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-admin:hover:not(:disabled) {
+  border-color: #ff4757;
+  color: #ff4757;
+  background: rgba(255, 71, 87, 0.08);
+  box-shadow: 0 0 15px rgba(255, 71, 87, 0.2);
+}
+
+.btn-admin:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PRELOADER PREMIUM (FULLSCREEN GLASSMORPHISM)
+   ═══════════════════════════════════════════════════════════ */
+.preload-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 19, 43, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.preload-card {
+  width: 90%;
+  max-width: 380px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Concentric spinner design */
+.spinner-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-ring {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 3px solid transparent;
+  border-top-color: #00d4ff;
+  border-bottom-color: #00d4ff;
+  border-radius: 50%;
+  animation: spin-clockwise 2s linear infinite;
+}
+
+.inner-ring {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid transparent;
+  border-left-color: #ff4757;
+  border-right-color: #ff4757;
+  border-radius: 50%;
+  animation: spin-counter-clockwise 1.5s linear infinite;
+}
+
+.water-droplet {
+  font-size: 2.2rem;
+  animation: pulse-glow 1.2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.6));
+  z-index: 2;
+}
+
+.preload-title {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.preload-status {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  min-height: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes spin-clockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-counter-clockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+

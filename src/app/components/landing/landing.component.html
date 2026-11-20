@@ -1,0 +1,78 @@
+<div class="landing-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-particles">
+      <div class="particle-dot" *ngFor="let i of [1,2,3,4,5,6,7,8]" [style.animationDelay]="i * 0.8 + 's'"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">🎓 Fortalecimiento de las Habilidades de Pensamiento Sistémico en Estudiantes del Grado Sexto Mediante Simuladores Educativos</div>
+      <h1 class="hero-title">
+        Agroecología y <span class="gradient-text">Pensamiento Sistémico</span>
+      </h1>
+      
+      <div class="video-wrapper mt-4 mb-4" style="box-shadow: 0 10px 30px rgba(0,255,170,0.25); max-width: 800px; margin: 0 auto 30px;">
+        <iframe src="https://www.youtube.com/embed/5QvtYwyHpfc?start=148" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <!-- Texto Institucional y Pedagógico Solicitado -->
+      <div class="institutional-quote glass-panel p-4 mb-4" style="max-width: 900px; margin: 0 auto 30px; text-align: justify; line-height: 1.8; border-left: 4px solid #00f5d4;">
+        <p class="hero-subtitle mb-2" style="font-size: 1.05rem; color: #e2e8f0;">
+          "La implementación de la estrategia pedagógica Agroecología y Pensamiento Sistémico apoyada en DSSAT como simulador digital de cultivos se orientó a fortalecer las habilidades de pensamiento sistémico en estudiantes de sexto. Esta estrategia se desarrolló en tres actividades orientadas al análisis, síntesis e implementación del sistema. Cada una de estas implicó los momentos de inicio, que consistió en un proceso introductorio; seguido de uno de desarrollo, donde los estudiantes realizaron simulaciones; y uno final donde se fomentó la reflexión."
+        </p>
+        <p class="text-right mt-2 font-italic" style="color: #00f5d4; font-weight: 600; text-align: right;">
+          — Estudiante Aurelio Pisso Villaquirán
+        </p>
+      </div>
+
+      <div class="hero-actions">
+        <a routerLink="/dashboard" class="btn-primary">
+          <span>📊</span> Ir a Mis Actividades
+        </a>
+        <a routerLink="/laboratorio" class="btn-secondary">
+          <span>🌱</span> Explorar Agroecosistemas
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2 class="section-title">Estructura de la Estrategia Pedagógica</h2>
+    
+    <div class="features-grid">
+      <div class="feature-card" routerLink="/laboratorio/introduccion">
+        <div class="feature-icon">📖</div>
+        <h3>Momento de Inicio</h3>
+        <p>Proceso introductorio, sensibilización conceptual sobre relaciones sistémicas, lluvia de ideas y visión de interconexión.</p>
+      </div>
+
+      <div class="feature-card" routerLink="/laboratorio">
+        <div class="feature-icon">🔬</div>
+        <h3>Momento de Desarrollo</h3>
+        <p>Simulaciones interactivas inspiradas en modelos tipo DSSAT: factores bióticos/abióticos, escalas productivas y cálculo de recursos.</p>
+      </div>
+
+      <div class="feature-card" routerLink="/recursos">
+        <div class="feature-icon">📝</div>
+        <h3>Momento Final</h3>
+        <p>Reflexión crítica, toma de decisiones ante crisis de resiliencia agrícola, evaluaciones y registro de evidencias formativas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Actividades Formativas (Análisis, Síntesis, Implementación)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Momentos Didácticos (Inicio, Desarrollo, Cierre)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">6°</div>
+      <div class="stat-label">Grado de Educación Básica Secundaria</div>
+    </div>
+  </section>
+</div>

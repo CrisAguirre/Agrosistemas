@@ -1,0 +1,193 @@
+/* ═══════════════════════════════════════════════════════
+   SIMULACIÓN 7: ESCALAS PRODUCTIVAS — Estilos Ultra-Premium
+   ═══════════════════════════════════════════════════════ */
+
+.sim-container {
+  display: flex;
+  flex-direction: column;
+  margin: -24px;
+  background: #050a17;
+}
+
+.sim-main {
+  display: flex;
+  min-height: 75vh;
+  background: #000;
+}
+
+/* ───── Visual Area (Aerial View) ───── */
+.sim-visual-area {
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+  background: url('/assets/images/sim-bgs/sim7-escalas.png') no-repeat center center;
+  background-size: cover;
+  box-shadow: inset 0 0 120px rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ───── Grid Overlay ───── */
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 5;
+  transition: background-size 0.8s ease;
+}
+
+/* ───── Scale Highlight ───── */
+.scale-highlight {
+  position: relative;
+  z-index: 10;
+  padding: 40px;
+  background: rgba(10, 15, 25, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.scale-icon-container {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(221, 170, 0, 0.4));
+}
+
+.scale-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ddaa00;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ───── Footprint Heatmap ───── */
+.footprint-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 0, 0, 0.2), transparent 70%);
+  mix-blend-mode: color-burn;
+  pointer-events: none;
+  z-index: 8;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* ───── HUD Panels (Glassmorphism) ───── */
+.hud-panel {
+  background: rgba(10, 15, 25, 0.75);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #fff;
+  min-width: 180px;
+}
+
+.hud-group-top {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 30;
+}
+
+.hud-group-bot-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 30;
+}
+
+/* ───── Controls Panel ───── */
+.sim-controls {
+  flex: 1;
+  min-width: 340px;
+  background: rgba(13, 17, 23, 0.9);
+  backdrop-filter: blur(25px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.panel-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ddaa00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.sel-btn {
+  flex: 1;
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sel-btn.active {
+  background: rgba(221, 170, 0, 0.2);
+  border-color: #ddaa00;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(221, 170, 0, 0.4);
+}
+
+/* ───── Charts ───── */
+.chart-bar-wrap {
+  height: 12px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.chart-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ───── Educational Guide ───── */
+.educational-guide {
+  background: #050a17;
+  padding: 60px 20px;
+}
+
+.guide-content {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 24px;
+}
+
+/* ───── RESPONSIVE ───── */
+@media (max-width: 900px) {
+  .sim-main { flex-direction: column; }
+  .sim-controls { min-width: 100%; border-left: none; }
+  .sim-visual-area { height: 45vh; min-height: 45vh; flex-shrink: 0; }
+  .hud-panel { transform: scale(0.8); transform-origin: top right; }
+}

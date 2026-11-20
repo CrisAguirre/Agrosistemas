@@ -1,0 +1,56 @@
+<div class="lab-hub-page">
+  <div class="lab-header">
+    <h1 class="lab-title">Laboratorio de Simulaciones Agroecológicas</h1>
+    <p class="lab-subtitle">Estrategia pedagógica apoyada en simuladores digitales y DSSAT para el fortalecimiento del pensamiento sistémico</p>
+  </div>
+
+  <!-- Bloque 0: Introducción -->
+  <section class="sim-block">
+    <div class="block-header">
+      <span class="block-icon">📖</span>
+      <div>
+        <h2 class="block-title">Bloque 0: Introducción</h2>
+        <p class="block-desc">Contextualización Pedagógica y Pensamiento Sistémico</p>
+      </div>
+    </div>
+
+    <div class="sim-grid">
+      <app-sim-card
+        [simNumber]="0" title="Laboratorio de Introducción"
+        description="Justificación pedagógica, video introductorio, lluvia de ideas y síntesis de pensamiento sistémico."
+        icon="📽️" bloque="intro" [available]="true" routePath="/laboratorio/introduccion">
+      </app-sim-card>
+    </div>
+  </section>
+
+  <!-- Bloque 2: Agroecosistemas -->
+  <section class="sim-block">
+    <div class="block-header">
+      <span class="block-icon">🌱</span>
+      <div>
+        <h2 class="block-title">Bloque 2: Agroecosistemas</h2>
+        <p class="block-desc">Simulación e Intervención — Análisis, Síntesis y Resiliencia</p>
+      </div>
+    </div>
+
+    <div class="sim-grid">
+      <app-sim-card
+        [simNumber]="6" title="Factores del Cultivo"
+        description="Actividad 1: Análisis del sistema. Identificación de interacciones entre componentes bióticos y abióticos del agroecosistema."
+        icon="🌿" bloque="agro" [available]="true" routePath="/laboratorio/factores-cultivo">
+      </app-sim-card>
+
+      <app-sim-card
+        [simNumber]="7" title="Escalas Productivas"
+        description="Actividad 2: Síntesis del sistema. Simulador matemático de rendimiento, balance hídrico y nutrientes por área de siembra."
+        icon="📊" bloque="agro" [available]="true" routePath="/laboratorio/escalas-productivas">
+      </app-sim-card>
+
+      <app-sim-card
+        [simNumber]="8" title="Resiliencia Agrícola"
+        description="Actividad 3: Implementación y estabilidad. Escenarios de perturbación (sequía, plagas) y toma de decisiones sistémicas."
+        icon="🛡️" bloque="agro" [available]="true" routePath="/laboratorio/resiliencia-agricola">
+      </app-sim-card>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>SOLUCIÓN — Guía Sesiones 3-4</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; font-size: 11pt; color: #1a1a2e; line-height: 1.5; padding: 20mm 18mm; }
+  @media print { body { padding: 15mm; } .page-break { page-break-before: always; } .no-break { page-break-inside: avoid; } }
+  h1 { font-size: 20pt; color: #0f3460; text-align: center; margin-bottom: 4px; border-bottom: 3px solid #c0392b; padding-bottom: 8px; }
+  .subtitle { text-align: center; font-size: 10pt; color: #555; margin-bottom: 20px; }
+  h2 { font-size: 15pt; color: #c0392b; margin: 18px 0 6px; padding: 6px 10px; background: #fdecea; border-left: 4px solid #c0392b; }
+  h3 { font-size: 12pt; color: #0f3460; margin: 12px 0 6px; }
+  h4 { font-size: 11pt; color: #16213e; margin: 8px 0 4px; }
+  p { margin: 4px 0; }
+  .answer { background: #e8f5e9; border: 1px solid #81c784; border-radius: 6px; padding: 10px; margin: 6px 0; }
+  .answer::before { content: "✅ Respuesta: "; font-weight: bold; color: #2e7d32; }
+  .answer-table td { background: #f1f8e9; }
+  .explanation { background: #fff3e0; border: 1px solid #ffcc80; border-radius: 6px; padding: 8px; margin: 6px 0; font-size: 10pt; }
+  .explanation::before { content: "💡 Explicación: "; font-weight: bold; color: #e65100; }
+  .step-box { display: flex; align-items: flex-start; gap: 10px; margin: 6px 0; padding: 8px; background: #f8f9fa; border-radius: 6px; border-left: 3px solid #0f3460; }
+  .step-num { background: #0f3460; color: white; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 10pt; flex-shrink: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 10pt; }
+  th { background: #0f3460; color: white; padding: 6px 8px; text-align: left; font-size: 9pt; }
+  td { border: 1px solid #ccc; padding: 6px 8px; }
+  .info-box { background: #e8f4fd; border: 1px solid #b3d9f2; border-radius: 6px; padding: 10px; margin: 8px 0; }
+  .calc-box { background: #f3e5f5; border: 1px solid #ce93d8; border-radius: 6px; padding: 10px; margin: 8px 0; font-family: 'Courier New', monospace; }
+  ul { margin: 4px 0 4px 20px; }
+  li { margin: 2px 0; }
+  .footer-print { text-align: center; font-size: 8pt; color: #c0392b; margin-top: 20px; border-top: 1px solid #eee; padding-top: 6px; font-weight: bold; }
+  .watermark { text-align: center; color: #c0392b; font-size: 12pt; font-weight: bold; border: 2px solid #c0392b; padding: 6px; margin-bottom: 15px; border-radius: 6px; }
+</style>
+</head>
+<body>
+
+<h1>📗 Guía de Soluciones — Docente</h1>
+<p class="subtitle">Grado Noveno (9°) — Institución Educativa Jhon F Kennedy<br>Plataforma EVA — Ciclo del Agua | Sesiones 3 y 4 | Ciencias Naturales y Educación Ambiental</p>
+<div class="watermark">⚠️ DOCUMENTO EXCLUSIVO PARA EL DOCENTE — NO DISTRIBUIR A ESTUDIANTES</div>
+
+<!-- ==================== SESIÓN 3 SOLUCIÓN ==================== -->
+<h2>🔬 Sesión 3: Precipitación — SOLUCIONES</h2>
+
+<h3>🧪 Parte B: Experimentación Guiada</h3>
+
+<div class="step-box"><span class="step-num">1</span><div><strong>Clasificación por intensidad</strong> (Duración=60 min, Área=100 m², Viento=10 km/h)</div></div>
+
+<div class="info-box">
+  <strong>Fórmulas aplicadas:</strong><br>
+  • Tamaño gota: D₀ = 0.5 + 2 × (I/100)<sup>0.25</sup> mm<br>
+  • Energía: KE = (11.87 + 8.73 × log₁₀(I)) × I J/m²/h<br>
+  • Volumen: V = I × A × t / 1000 = I × 100 × 1 / 1000 = I/10 litros (para A=100, t=60min=1h)
+</div>
+
+<table>
+  <tr><th>Intensidad</th><th>Tipo</th><th>D₀ (mm)</th><th>KE (J/m²/h)</th><th>Volumen (L)</th></tr>
+  <tr class="answer-table"><td>2 mm/h</td><td>Llovizna</td><td>≈ 1.26</td><td>≈ 29</td><td><strong>200</strong></td></tr>
+  <tr class="answer-table"><td>10 mm/h</td><td>Moderada</td><td>≈ 1.62</td><td>≈ 206</td><td><strong>1,000</strong></td></tr>
+  <tr class="answer-table"><td>30 mm/h</td><td>Fuerte</td><td>≈ 1.98</td><td>≈ 618</td><td><strong>3,000</strong></td></tr>
+  <tr class="answer-table"><td>50 mm/h</td><td>Torrencial</td><td>≈ 2.18</td><td>≈ 1,030</td><td><strong>5,000</strong></td></tr>
+  <tr class="answer-table"><td>80 mm/h</td><td>Torrencial</td><td>≈ 2.36</td><td>≈ 1,648</td><td><strong>8,000</strong></td></tr>
+</table>
+<div class="explanation">El volumen crece linealmente con la intensidad (V = I × A × t / 1000), pero la energía cinética crece más que linealmente porque las gotas más grandes tienen más masa y más velocidad de caída.</div>
+
+<div class="step-box"><span class="step-num">2</span><div><strong>Efecto de la Duración</strong> (I=30 mm/h, A=100 m²)</div></div>
+<div class="calc-box">V = I × A × (t/60) / 1000 = 30 × 100 × (t/60) / 1000 = 0.05 × t litros</div>
+<table>
+  <tr><th>Duración (min)</th><th>Lámina de Agua (mm)</th><th>Volumen (L)</th></tr>
+  <tr class="answer-table"><td>30</td><td>15 mm</td><td><strong>1,500</strong></td></tr>
+  <tr class="answer-table"><td>60</td><td>30 mm</td><td><strong>3,000</strong></td></tr>
+  <tr class="answer-table"><td>120</td><td>60 mm</td><td><strong>6,000</strong></td></tr>
+  <tr class="answer-table"><td>360</td><td>180 mm</td><td><strong>18,000</strong></td></tr>
+</table>
+<div class="answer">Sí, la relación es perfectamente <strong>lineal</strong>. El volumen es directamente proporcional a la duración (V = I × A × t / 1000). Duplicar el tiempo duplica el volumen exactamente. La lámina de agua = I × (t/60).</div>
+
+<div class="step-box"><span class="step-num">3</span><div><strong>Cambio de escala — Área</strong> (I=30 mm/h, t=60 min)</div></div>
+<div class="calc-box">V = 30 × A × 1 / 1000 = 0.03 × A litros</div>
+<table>
+  <tr><th>Área (m²)</th><th>Equivalente real</th><th>Volumen (L)</th></tr>
+  <tr class="answer-table"><td>1</td><td>Pluviómetro</td><td><strong>30</strong></td></tr>
+  <tr class="answer-table"><td>100</td><td>Un techo de casa</td><td><strong>3,000</strong></td></tr>
+  <tr class="answer-table"><td>5,000</td><td>Área del colegio</td><td><strong>150,000</strong></td></tr>
+  <tr class="answer-table"><td>10,000</td><td>Una hectárea</td><td><strong>300,000</strong></td></tr>
+</table>
+
+<div class="step-box"><span class="step-num">4</span><div><strong>Cálculo manual — Reto del colegio</strong></div></div>
+<div class="calc-box">
+V = I × A × t / 1000<br>
+V = 40 × 5000 × 1 / 1000<br>
+V = 200,000 / 1000<br>
+<strong>V = 200,000 litros = 200 m³</strong>
+</div>
+<div class="explanation">200,000 litros equivalen a llenar una piscina olímpica al 8%, o 200 tanques de agua de 1000 litros. Esto muestra la importancia de la escala: lo que parece poca lluvia en un pluviómetro se convierte en enormes volúmenes sobre superficies grandes.</div>
+
+<h3>✍️ Parte C: Reflexión</h3>
+<p><strong>1.</strong> Importancia de medir en diferentes escalas:</p>
+<div class="answer">Medir en diferentes escalas es fundamental porque los fenómenos hidrológicos tienen impactos que varían enormemente con el área. Un pluviómetro (1 m²) sirve para registro meteorológico estándar, pero para diseño de drenajes urbanos necesitamos saber cuánta agua cae sobre una cuenca completa. Esto permite dimensionar alcantarillas, presas y sistemas de riego. La misma lluvia de 30 mm/h produce 30 litros en 1 m² pero 300,000 litros en una hectárea.</div>
+
+<p><strong>2.</strong> Energía cinética y erosión:</p>
+<div class="answer">La energía cinética de la lluvia (medida con la ecuación de Wischmeier) determina la <strong>erosividad</strong>: la capacidad de la lluvia para desprender partículas del suelo. Gotas grandes (en lluvias torrenciales) impactan con más fuerza, compactando y fragmentando el suelo, y generando salpicaduras que transportan partículas. Esto causa erosión laminar, en surcos y cárcavas, degradando la fertilidad del suelo agrícola.</div>
+
+<!-- ==================== SESIÓN 4 SOLUCIÓN ==================== -->
+<div class="page-break"></div>
+<h2>🔬 Sesión 4: Infiltración y Escorrentía — SOLUCIONES</h2>
+
+<h3>🧪 Parte B: Experimentación Guiada</h3>
+
+<div class="step-box"><span class="step-num">1</span><div><strong>Comparación de suelos</strong> (Lluvia=30 mm/h, Pendiente=10°, Vegetación=50%)</div></div>
+
+<div class="info-box">
+  <strong>Lógica clave:</strong> Si lluvia < Ks del suelo → toda el agua se infiltra (escorrentía ≈ 0). Si lluvia > Ks → exceso = escorrentía (Horton).
+</div>
+
+<table>
+  <tr><th>Suelo</th><th>Infiltración</th><th>Escorrentía</th><th>Saturación</th><th>Ks</th><th>Coef. Escorr.</th></tr>
+  <tr class="answer-table"><td>🏖️ Arena</td><td>≈ 25-27 mm/h</td><td>≈ 0-2 mm/h</td><td>≈ 15-20%</td><td>60</td><td>≈ 0.05</td></tr>
+  <tr class="answer-table"><td>🌾 Limo</td><td>≈ 14-16 mm/h</td><td>≈ 10-14 mm/h</td><td>≈ 30-40%</td><td>15</td><td>≈ 0.40</td></tr>
+  <tr class="answer-table"><td>🧱 Arcilla</td><td>≈ 2-4 mm/h</td><td>≈ 22-28 mm/h</td><td>≈ 50-60%</td><td>2</td><td>≈ 0.85</td></tr>
+  <tr class="answer-table"><td>🌱 Franco</td><td>≈ 20-24 mm/h</td><td>≈ 4-8 mm/h</td><td>≈ 25-30%</td><td>25</td><td>≈ 0.20</td></tr>
+</table>
+<div class="answer">La arcilla genera aproximadamente <strong>10-15 veces más escorrentía</strong> que la arena. Esto se debe a que la conductividad hidráulica de la arcilla (Ks=2 mm/h) es 30 veces menor que la de la arena (Ks=60 mm/h). Las partículas ultrafinas de la arcilla crean poros muy pequeños que resisten el paso del agua.</div>
+
+<div class="step-box"><span class="step-num">2</span><div><strong>Exceso de Horton</strong> (Franco, Pendiente=10°, Vegetación=50%)</div></div>
+<table>
+  <tr><th>I (mm/h)</th><th>Infiltración</th><th>Escorrentía</th><th>Balance</th></tr>
+  <tr class="answer-table"><td>5</td><td>≈ 5</td><td>≈ 0</td><td>Infiltración total</td></tr>
+  <tr class="answer-table"><td>15</td><td>≈ 15</td><td>≈ 0</td><td>Infiltración total</td></tr>
+  <tr class="answer-table"><td>25</td><td>≈ 22-24</td><td>≈ 1-3</td><td>Flujo mixto</td></tr>
+  <tr class="answer-table"><td>40</td><td>≈ 24-26</td><td>≈ 12-16</td><td>Flujo mixto</td></tr>
+  <tr class="answer-table"><td>60</td><td>≈ 25-27</td><td>≈ 30-35</td><td>Flujo mixto</td></tr>
+  <tr class="answer-table"><td>80</td><td>≈ 25-28</td><td>≈ 48-55</td><td>Flujo mixto</td></tr>
+</table>
+<div class="answer">El <strong>exceso de Horton</strong> ocurre aproximadamente a <strong>20-25 mm/h</strong> para suelo franco. Este es el punto donde la intensidad de lluvia supera la capacidad de infiltración del suelo (Ks ≈ 25 mm/h para franco). Por encima de este umbral, la infiltración se "satura" y el exceso fluye como escorrentía superficial.</div>
+
+<div class="step-box"><span class="step-num">3</span><div><strong>Efecto de la pendiente</strong> (Franco, I=30, Veg=50%)</div></div>
+<table>
+  <tr><th>Pendiente (°)</th><th>Infiltración</th><th>Escorrentía</th><th>Coef. Escorr.</th></tr>
+  <tr class="answer-table"><td>0°</td><td>≈ 24-26</td><td>≈ 2-4</td><td>≈ 0.10</td></tr>
+  <tr class="answer-table"><td>15°</td><td>≈ 20-22</td><td>≈ 8-12</td><td>≈ 0.30</td></tr>
+  <tr class="answer-table"><td>30°</td><td>≈ 16-18</td><td>≈ 16-22</td><td>≈ 0.55</td></tr>
+  <tr class="answer-table"><td>45°</td><td>≈ 12-14</td><td>≈ 28-38</td><td>≈ 0.75</td></tr>
+</table>
+<div class="explanation">A mayor pendiente, el agua tiene menos tiempo de contacto con el suelo y la gravedad la arrastra ladera abajo antes de infiltrarse. El factor de pendiente reduce la infiltración: slopeFactor = 1 − (ángulo/90) × 0.6</div>
+
+<div class="step-box"><span class="step-num">4</span><div><strong>Efecto de la vegetación</strong> (Franco, I=30, Pendiente=10°)</div></div>
+<table>
+  <tr><th>Vegetación (%)</th><th>Infiltración</th><th>Escorrentía</th></tr>
+  <tr class="answer-table"><td>0%</td><td>≈ 18-20</td><td>≈ 10-14</td></tr>
+  <tr class="answer-table"><td>50%</td><td>≈ 22-24</td><td>≈ 4-8</td></tr>
+  <tr class="answer-table"><td>100%</td><td>≈ 24-27</td><td>≈ 1-4</td></tr>
+</table>
+<div class="answer">La vegetación al 100% reduce la escorrentía en un <strong>60-80%</strong> comparado con suelo desnudo. Esto ocurre por tres razones: (1) las raíces crean macroporos que facilitan la infiltración, (2) la hojarasca intercepta parte de la lluvia (intercepción vegetal), y (3) la cobertura protege el suelo de la compactación por impacto de gotas.</div>
+
+<h3>🧠 Parte C: Reflexión</h3>
+<p><strong>1.</strong> Destinos del agua de lluvia:</p>
+<div class="answer">El agua que cae al suelo tiene tres destinos principales: (1) <strong>Infiltración</strong> — penetra en el suelo recargando acuíferos y alimentando raíces, (2) <strong>Escorrentía superficial</strong> — fluye sobre la superficie hacia ríos y lagos, (3) <strong>Intercepción vegetal</strong> — es retenida por las hojas y troncos de las plantas, evaporándose posteriormente. La proporción depende del tipo de suelo, pendiente, vegetación e intensidad de lluvia.</div>
+
+<p><strong>2.</strong> Material que absorbe más rápido vs. retiene en superficie:</p>
+<div class="answer">La <strong>arena</strong> absorbe el agua más rápido (Ks=60 mm/h) gracias a sus macroporos, pero retiene poca humedad. La <strong>arcilla</strong> retiene el agua en la superficie (Ks=2 mm/h) porque sus microporos son demasiado pequeños. En nuestro entorno, los suelos de ladera con poca vegetación (comunes en Antioquia) se asemejan a la arcilla compactada, generando mucha escorrentía y riesgo de deslizamientos.</div>
+
+<p><strong>3.</strong> Importancia de la vegetación:</p>
+<div class="answer">Los datos experimentales demuestran que la vegetación es un <strong>regulador natural</strong> del flujo hídrico. Sin ella, la escorrentía se multiplica y causa erosión, inundaciones y pérdida de suelo fértil. La deforestación rompe este equilibrio: al eliminar la cobertura, el suelo se compacta, se reduce la infiltración y aumenta el riesgo de desastres naturales.</div>
+
+<p><strong>4.</strong> Diagrama esperado:</p>
+<div class="info-box">
+  <p><strong>Diagrama de flujo correcto:</strong></p>
+  <p>🌧️ Lluvia (P) → se divide en:</p>
+  <ul>
+    <li>→ 🌿 Intercepción vegetal (E<sub>int</sub>) → Evaporación</li>
+    <li>→ ⬇️ Infiltración (I) → Zona no saturada → Nivel freático / Acuífero</li>
+    <li>→ ➡️ Escorrentía (R) → Ríos → Lagos → Océano</li>
+  </ul>
+  <p><strong>Ecuación:</strong> P = I + R + E<sub>int</sub></p>
+</div>
+
+<div class="footer-print">⚠️ SOLUCIONES — USO EXCLUSIVO DEL DOCENTE | Plataforma EVA — Sesiones 3-4</div>
+
+</body>
+</html>
